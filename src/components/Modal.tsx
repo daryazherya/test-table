@@ -7,7 +7,7 @@ const Modal = ({
     sentData, 
     setActiveModal,
     clearForm,
-    text}: PropsModal) => {
+    options}: PropsModal) => {
 
     console.log(formData, 'JJJJ')
     return <div className={activeModal ? 'modal-active' : 'modal-close'}>
@@ -18,7 +18,7 @@ const Modal = ({
             >
                 <div className="form-inputs">
                     <p>
-                        {text.description}
+                        {options.description}
                     </p>
                     <p>
                         Заполните все поля для создания новой номенклатуры.
@@ -62,7 +62,7 @@ const Modal = ({
                         className="button-post"
                         type='submit'
                         onClick={() => {
-                            sentData(text.id);
+                            sentData(options.id);
                             setActiveModal(!activeModal);
                             clearForm();
                         }}

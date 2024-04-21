@@ -6,6 +6,7 @@ import { postData } from './api/postData';
 import { PAGE_SIZES } from './utils/constants';
 import { FormData, Item, Data } from './types';
 import { patchData } from './api/patchData';
+import { fetchAllData } from './api/fetchAllData';
 
 
 
@@ -185,7 +186,7 @@ function App() {
                 </label>
             </div>
             {activeModal && formData.name === '' && <Modal
-                text={{ description: 'Новая позиция', id: '' }}
+                options={{ description: 'Новая позиция', id: '' }}
                 activeModal={activeModal}
                 formData={formData}
                 collectFormData={collectFormData}
@@ -194,7 +195,7 @@ function App() {
                 clearForm={clearForm}
             />}
             {activeModal && formData.name !== '' && <Modal
-                text={{ description: 'Редактирование позиции', id }}
+                options={{ description: 'Редактирование позиции', id }}
                 activeModal={activeModal}
                 formData={formData}
                 collectFormData={collectFormData}

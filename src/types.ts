@@ -25,7 +25,7 @@ export interface PropsModal {
     collectFormData: (form: string, value: string) => void;
     sentData: (id?: string ) => void;
     setActiveModal: (value: boolean) => void;
-    text: {
+    options: {
         description: string;
         id: string
     };

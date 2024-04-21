@@ -17,4 +17,4 @@ async function fetchToken() {
     return data;
 }
 
-export const token = await fetchToken().then(data => data.access_token)
+export const token = fetchToken().then(data => data.access_token)

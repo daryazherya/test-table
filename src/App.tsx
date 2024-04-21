@@ -6,13 +6,15 @@ import { postData } from './api/postData';
 import { PAGE_SIZES } from './utils/constants';
 import { FormData, Item, Data } from './types';
 import { patchData } from './api/patchData';
-import { fetchAllData } from './api/fetchAllData';
 
 
 
 
 function App() {
-    const [data, setData] = useState<Data>({});
+    const [data, setData] = useState<Data>({
+        result: [],
+        total: 0
+    });
     const [dataTable, setDataTable] = useState<Item[]>([]);
     const [page, setPage] = useState(1);
     const [pageSize, setPageSize] = useState(PAGE_SIZES[0]);

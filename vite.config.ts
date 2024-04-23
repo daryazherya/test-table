@@ -33,8 +33,8 @@ export default defineConfig({
             Authorization: `${VITE_AUTH_TOKEN}`,
         },  
     } ,
-      plugins: [react()],
-    //  base: '/test-table'
+    plugins: [react()],
+    base: '/test-table'
 })
 
 

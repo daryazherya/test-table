@@ -1,7 +1,7 @@
-import { token } from "./fetchToken";
+const token = import.meta.env.VITE_AUTH_TOKEN;
 
 export async function fetchDataForPage(page: number, pageSize: number) {
-
+    console.log(token,'KKKk')
     const url: string = `https://hcateringback-dev.unitbeandev.com/api/wh/items?page=${page}&pageSize=${pageSize}`;
     const response = await fetch(url, {
         method: 'GET',
@@ -14,3 +14,10 @@ export async function fetchDataForPage(page: number, pageSize: number) {
     return data
 
 }
+
+
+
+
+
+
+

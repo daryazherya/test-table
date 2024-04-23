@@ -26,6 +26,7 @@ function App() {
         code: '',
         measurement_units: ''
     });
+
     const [id, setId] = useState('');
 
     useEffect(() => {

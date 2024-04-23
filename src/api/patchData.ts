@@ -1,9 +1,9 @@
 import { FormData } from "../types";
-import { token } from "./fetchToken";
+const token = import.meta.env.VITE_AUTH_TOKEN;
 
-export async function patchData(body: Partial<FormData>, id: string) {
+export async function patchData(body: Partial<FormData>,id: string) {
 
-    const url: string = `https://hcateringback-dev.unitbeandev.com/api/wh/items/${id}`;
+    const url: string = `https://hcateringback-dev.unitbeandev.com/api/wh/items${id}`;
     const response = await fetch(url, {
         method: 'PATCH',
         headers: {

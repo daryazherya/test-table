@@ -1,5 +1,5 @@
 import { FormData} from "../types";
-import { token } from "./fetchToken";
+const token = import.meta.env.VITE_AUTH_TOKEN;
 
 export async function postData(body: FormData) {
 

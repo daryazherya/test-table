@@ -8,8 +8,6 @@ import { FormData, Item, Data } from './types';
 import { patchData } from './api/patchData';
 
 
-
-
 function App() {
     const [data, setData] = useState<Data>({
         result: [],

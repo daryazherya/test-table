@@ -33,5 +33,3 @@ export default defineConfig({
     plugins: [react()],
     base: '/test-table'
 })
-
-
